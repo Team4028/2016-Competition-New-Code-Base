@@ -1,0 +1,26 @@
+package org.usfirst.frc.team4028.robot.subsystems;
+
+import edu.wpi.first.wpilibj.Servo;
+
+public class Cupid {
+
+	private Servo _cupidServo;
+	
+	private static final double CUPID_LOADED_POSITION = 1.0;
+	private static final double CUPID_FIRE_POSITION = 0.0;
+	
+	public Cupid(int cupidPWMPort)
+	{
+		_cupidServo = new Servo(cupidPWMPort);
+	}
+	
+	public void CupidLoaded()
+	{
+		_cupidServo.setPosition(CUPID_LOADED_POSITION);
+	}
+	
+	public void CupidFire()
+	{
+		_cupidServo.setPosition(CUPID_FIRE_POSITION);
+	}
+}

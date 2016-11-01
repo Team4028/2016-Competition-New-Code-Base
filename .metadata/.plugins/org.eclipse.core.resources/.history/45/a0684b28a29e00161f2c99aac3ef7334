@@ -1,0 +1,27 @@
+package org.usfirst.frc.team4028.robot.subsystems;
+
+import edu.wpi.first.wpilibj.Servo;
+
+public class And1 
+{
+
+	private Servo _and1Servo;
+	
+	private static final double AND1_UP_POSITION = 1.0;
+	private static final double AND1_DEPLOY_POSITION = 0.0;
+	
+	public And1 (int servoPWMPort)
+	{
+		_and1Servo = new Servo(servoPWMPort);
+	}
+	
+	public void And1Up()
+	{
+		_and1Servo.setPosition(AND1_UP_POSITION);
+	}
+	
+	public void And1Deploy()
+	{
+		_and1Servo.setPosition(AND1_DEPLOY_POSITION);
+	}
+}
